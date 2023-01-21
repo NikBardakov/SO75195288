@@ -31,41 +31,7 @@ export class ChatViewComponent implements OnInit {
   public logMessages(){
     console.log("Log current messages: ", this.messages);
   }
-  public addMessages() {
-    const json = `
-    {
-      "chats": [
-          {
-              "contactName": "Test",
-              "messages": [
-                  {
-                      "timestamp": "2022-12-11T17:00:12Z",
-                      "id": "35A8984427489ACE786A9F5DFA81E7",
-                      "fromMe": true,
-                      "type": "text",
-                      "text": "Hello!"
-                  },
-                  {
-                      "timestamp": "2022-12-11T21:34:04Z",
-                      "id": "009715FBED647B52CD4EA6AE9A7CA4",
-                      "fromMe": false,
-                      "type": "text",
-                      "text": "How are you?"
-                  },
-                  {
-                      "timestamp": "2022-12-11T21:34:23Z",
-                      "id": "479AFD522FEC7444991CCA578EDF9F",
-                      "fromMe": false,
-                      "type": "text",
-                      "text": "What are you doing today?"
-                  }
-              ]
-          }
-      ]
-  }
-    `
-    this.messageParsingService.parseJson(json);
-  }
+  
 
   ngOnInit(): void {
     console.log('chat view component msgs: ', this.messages);
