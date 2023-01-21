@@ -1,0 +1,11 @@
+<app-message
+    *ngFor="let m of messages"
+    [timestampInput]="m.timestamp"
+    [fromMeInput]="m.fromMe"
+    [textInput]="m.text"
+>
+</app-message>
+
+<button mat-raised-button (click)="logMessages()">Log current messages</button>
+<br>
+<button mat-raised-button1 (click)="addMessages()">Add messages</button>
